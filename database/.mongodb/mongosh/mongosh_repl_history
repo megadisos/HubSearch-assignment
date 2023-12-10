@@ -1,0 +1,28 @@
+})
+  ]
+    { role: "dbOwner", db: "HubSearch_Assignement" }
+    { role: "dbAdmin", db: "HubSearch_Assignement" },
+    { role: "readWrite", db: "HubSearch_Assignement" },
+  roles: [
+  pwd: "User12345",
+  user: "user",
+db.createUser({
+  ]
+    { role: "dbOwner", db: "nombre_base_de_datos" }
+    { role: "dbAdmin", db: "nombre_base_de_datos" },
+    { role: "readWrite", db: "nombre_base_de_datos" },
+  roles: [
+  pwd: "contrasena",
+  user: "nombre_usuario",
+db.createUser({
+use HubSearch_Assignement
+db.createUser({ user: "user", pwd: "User12345", roles: [ { role: "readWrite", db: "HubSearch_Assignement" }, { role: "dbAdmin", db: "HubSearch_Assignement" }, { role: "dbOwner", db: "HubSearch_Assignement" }] })
+roles: [ { role: "readWrite", db: "HubSearch_Assignement" }, { role: "dbAdmin", db: "HubSearch_Assignement" }, { role: "dbOwner", db: "HubSearch_Assignement" }]
+use HubSearch_Assignement
+})
+roles: [ { role: "readWrite", db: "HubSearch_Assignement" }, { role: "dbAdmin", db: "HubSearch_Assignement" }, { role: "dbOwner", db: "HubSearch_Assignement" }]
+user: "user", pwd: "User12345",
+use db.createUser({
+use root
+use adminuse root
+use admin
