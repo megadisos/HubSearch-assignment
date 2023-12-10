@@ -11,21 +11,21 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
-  backend:
-      build:
-        context: ./backend
-        dockerfile: Dockerfile
-      container_name: nodejs-backend
-      ports:
-        - "3001:3001"
-      depends_on:
-        - mongo
-  frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    container_name: react-frontend
-    ports:
-      - "3000:3000"
-    depends_on:
-      - backend
+  # backend:
+  #     build:
+  #       context: ./backend
+  #       dockerfile: Dockerfile
+  #     container_name: nodejs-backend
+  #     ports:
+  #       - "3001:3001"
+  #     depends_on:
+  #       - mongo
+  # frontend:
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: Dockerfile
+  #   container_name: react-frontend
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - backend

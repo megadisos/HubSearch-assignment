@@ -34,11 +34,11 @@ const registerNewUser = async (user:User) => {
  */
 const loginUser = async (user:User) => {
     const luser = await ModelUsers.findOne({username:user.username})
-    if(!luser) return {error:'Usuario no existe'}
+    if(!luser) return {error:'Usuer does not exist'}
 
     // validacion de password
     const validPassword = await bcrypt.compare(user.password,luser.password)
-    if(!validPassword) return {error:'Password no valido'}
+    if(!validPassword) return {error:'Not valid Password'}
 
      // create token
      const token = jwt.sign({
