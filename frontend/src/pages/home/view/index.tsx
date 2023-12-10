@@ -1,5 +1,5 @@
 import Layout from "../../../shared/layout/view";
-import Products from "../../product-list/view/components/products";
+import Products from "../../Products/View/Components/products";
 import './styles/home.css'
 function Home() {
   return (

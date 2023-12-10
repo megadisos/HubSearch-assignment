@@ -4,6 +4,7 @@ const ModelProduct = require('../database/models/products')
  */
 const getAllProducts = async () => {
     const products = await ModelProduct.find()
+    console.log(products)
     return products
   }
 

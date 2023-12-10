@@ -1,4 +1,6 @@
 import { useForm } from "react-hook-form"
+import { useNavigate } from "react-router-dom";
+import { useGetProductQuery, useGetProductsQuery } from "../../../pages/Products/View/Hooks/useQueries";
 import { SearchProductForm } from "../modules/searchEngine";
 
 
@@ -7,7 +9,11 @@ import { SearchProductForm } from "../modules/searchEngine";
 function SearchEngine() {
 
     const { register, handleSubmit, formState: { errors } } = useForm<SearchProductForm>();
-    const onSubmit = (data: SearchProductForm) => console.log(data);
+
+    const navigate = useNavigate()
+    const onSubmit = (data: SearchProductForm) => {
+      navigate('/Products',{state:{query:data.productName}})
+    };
   return (
    
    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-row gap-2">

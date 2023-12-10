@@ -8,9 +8,7 @@ const jwt = require('jsonwebtoken');
  * @param user model
  */
 const registerNewUser = async (user:User) => {
-    const isEmailExist = await ModelUsers.findOne({email:user.email})
     const isUsernameExist = await ModelUsers.findOne({username:user.username})
-    if(isEmailExist) return {error:'Email ya registrado'}
     if(isUsernameExist) return {error:'Usuario ya registrado'}
       // hash contraseña
       const salt = await bcrypt.genSalt(12);
@@ -19,8 +17,6 @@ const registerNewUser = async (user:User) => {
     const nUser = new ModelUsers({
         username:user.username,
         password:bpassword,
-        email:user.email,
-        superadmin:false
     })
     try {
         const savedUser = await nUser.save();
@@ -50,7 +46,7 @@ const loginUser = async (user:User) => {
         id: user._id
     }, process.env.SERVER_TOKEN)
 
-    return {error:null,data:'authenticado',token:token}
+    return {error:null,data:'authenticado',token:token,userId:luser._id}
 
   }
 

@@ -6,6 +6,7 @@ const ProductsServices = require('../services/products')
  */
  const getProductsController = async (req, res) => {
     const products = await  ProductsServices.getAllProducts()
+   
     res.send(products)
   }
 
@@ -15,6 +16,8 @@ const ProductsServices = require('../services/products')
  * @param res Express Response
  */
  const getProductsByIdController = async (req, res) => {
+
+  console.log(req.params)
   const id = req.params.id
   const product = await  ProductsServices.getProductById(id)
   res.send(product)
