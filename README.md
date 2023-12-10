@@ -1,6 +1,6 @@
 # HubSearch-assignment
 
-# Load database
+# Load Mongo database
 
 in root project run:
 
