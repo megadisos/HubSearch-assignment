@@ -25,3 +25,5 @@ username: jreales
 
 password: password
 
+# THE .ENV FILES WERE ADDED
+
