@@ -1,0 +1,14 @@
+import Layout from "../../../Shared/Layout/View";
+import Products from "../../Products/View/Components/products";
+import './Styles/home.css'
+function Home() {
+  return (
+    <Layout>
+      {/* home image */}
+     <div className="border-2 h-2/4 p-5 custom-bg" ></div>
+     <div className="border-2 h-2/4"><Products /></div>
+    </Layout>
+  );
+}
+
+export default Home;
